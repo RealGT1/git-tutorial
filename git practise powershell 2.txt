@@ -1,0 +1,523 @@
+PS C:\Users\SHREYAS P> git "C:\Users\SHREYAS P\Desktop\practice git"
+git: 'C:\Users\SHREYAS P\Desktop\practice git' is not a git command. See 'git --help'.
+PS C:\Users\SHREYAS P> git log
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\SHREYAS P> cd "C:\Users\SHREYAS P\Desktop\practice git"
+PS C:\Users\SHREYAS P\Desktop\practice git> git log
+commit 6801e36b1286a3519776987f8a1231c01682be66 (HEAD -> master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git log
+commit c84359343654d11eebd9c614be8086fbde9bc919 (HEAD -> master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git log
+commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552 (HEAD -> master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:52 2023 +0530
+
+    Version 3
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git commit 6801e36b1286a3519776987f8a1231c01682be66
+error: pathspec '6801e36b1286a3519776987f8a1231c01682be66' did not match any file(s) known to git
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout 6801e36b1286a3519776987f8a1231c01682be66
+Note: switching to '6801e36b1286a3519776987f8a1231c01682be66'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 6801e36 Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout  c84359343654d11eebd9c614be8086fbde9bc919
+Previous HEAD position was 6801e36 Version 1
+HEAD is now at c843593 Version 2
+PS C:\Users\SHREYAS P\Desktop\practice git> git log
+commit 3f9522fcff3bcad10961bbde06ee5433ff6e3534 (HEAD)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:30:57 2023 +0530
+
+    modified version 2
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git log --all
+commit 3f9522fcff3bcad10961bbde06ee5433ff6e3534 (HEAD)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:30:57 2023 +0530
+
+    modified version 2
+
+commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552 (master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:52 2023 +0530
+
+    Version 3
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git log --all --graph
+* commit 3f9522fcff3bcad10961bbde06ee5433ff6e3534 (HEAD)
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:30:57 2023 +0530
+|
+|     modified version 2
+|
+| * commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552 (master)
+|/  Author: SHREYAS <samarthpuru3557@gmail.com>
+|   Date:   Fri May 5 15:28:52 2023 +0530
+|
+|       Version 3
+|
+* commit c84359343654d11eebd9c614be8086fbde9bc919
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:28:17 2023 +0530
+|
+|     Version 2
+|
+* commit 6801e36b1286a3519776987f8a1231c01682be66
+  Author: SHREYAS <samarthpuru3557@gmail.com>
+  Date:   Fri May 5 15:27:01 2023 +0530
+
+      Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout 6801e36b1286a3519776987f8a1231c01682be66 .
+Updated 2 paths from 8b9b39b
+PS C:\Users\SHREYAS P\Desktop\practice git> git log --all
+commit d3111b4a718fd082e524d28a30f58d872fea1907 (HEAD)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:33:36 2023 +0530
+
+    version 1 restored
+
+commit 3f9522fcff3bcad10961bbde06ee5433ff6e3534
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:30:57 2023 +0530
+
+    modified version 2
+
+commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552 (master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:52 2023 +0530
+
+    Version 3
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git log --all --graph
+* commit d3111b4a718fd082e524d28a30f58d872fea1907 (HEAD)
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:33:36 2023 +0530
+|
+|     version 1 restored
+|
+* commit 3f9522fcff3bcad10961bbde06ee5433ff6e3534
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:30:57 2023 +0530
+|
+|     modified version 2
+|
+| * commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552 (master)
+|/  Author: SHREYAS <samarthpuru3557@gmail.com>
+|   Date:   Fri May 5 15:28:52 2023 +0530
+|
+|       Version 3
+|
+* commit c84359343654d11eebd9c614be8086fbde9bc919
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:28:17 2023 +0530
+|
+|     Version 2
+|
+* commit 6801e36b1286a3519776987f8a1231c01682be66
+  Author: SHREYAS <samarthpuru3557@gmail.com>
+  Date:   Fri May 5 15:27:01 2023 +0530
+
+      Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout master
+Warning: you are leaving 2 commits behind, not connected to
+any of your branches:
+
+  d3111b4 version 1 restored
+  3f9522f modified version 2
+
+If you want to keep them by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> d3111b4
+
+Switched to branch 'master'
+PS C:\Users\SHREYAS P\Desktop\practice git> git log
+commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552 (HEAD -> master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:52 2023 +0530
+
+    Version 3
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout c84359343654d11eebd9c614be8086fbde9bc919 .
+Updated 2 paths from 33162ea
+PS C:\Users\SHREYAS P\Desktop\practice git> git log
+commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552 (HEAD -> master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:52 2023 +0530
+
+    Version 3
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git log
+commit d0c5cbd3bbd36de3b0c13132e9b1188da7bfb5e5 (HEAD -> master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:36:49 2023 +0530
+
+    restored version 2
+
+commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:52 2023 +0530
+
+    Version 3
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout 6801e36b1286a3519776987f8a1231c01682be66 .
+Updated 2 paths from 8b9b39b
+PS C:\Users\SHREYAS P\Desktop\practice git> git log
+commit a0e7325f2f0be84d06b9f33468f6dbd80a411522 (HEAD -> master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:37:40 2023 +0530
+
+    modified version 1
+
+commit d0c5cbd3bbd36de3b0c13132e9b1188da7bfb5e5
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:36:49 2023 +0530
+
+    restored version 2
+
+commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:52 2023 +0530
+
+    Version 3
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git log --all --graph
+* commit a0e7325f2f0be84d06b9f33468f6dbd80a411522 (HEAD -> master)
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:37:40 2023 +0530
+|
+|     modified version 1
+|
+* commit d0c5cbd3bbd36de3b0c13132e9b1188da7bfb5e5
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:36:49 2023 +0530
+|
+|     restored version 2
+|
+* commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:28:52 2023 +0530
+|
+|     Version 3
+|
+* commit c84359343654d11eebd9c614be8086fbde9bc919
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:28:17 2023 +0530
+|
+|     Version 2
+|
+* commit 6801e36b1286a3519776987f8a1231c01682be66
+  Author: SHREYAS <samarthpuru3557@gmail.com>
+  Date:   Fri May 5 15:27:01 2023 +0530
+
+      Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout .
+Updated 0 paths from the index
+PS C:\Users\SHREYAS P\Desktop\practice git> git log
+commit a0e7325f2f0be84d06b9f33468f6dbd80a411522 (HEAD -> master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:37:40 2023 +0530
+
+    modified version 1
+
+commit d0c5cbd3bbd36de3b0c13132e9b1188da7bfb5e5
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:36:49 2023 +0530
+
+    restored version 2
+
+commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:52 2023 +0530
+
+    Version 3
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git log --all --graph
+* commit a0e7325f2f0be84d06b9f33468f6dbd80a411522 (HEAD -> master)
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:37:40 2023 +0530
+|
+|     modified version 1
+|
+* commit d0c5cbd3bbd36de3b0c13132e9b1188da7bfb5e5
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:36:49 2023 +0530
+|
+|     restored version 2
+|
+* commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:28:52 2023 +0530
+|
+|     Version 3
+|
+* commit c84359343654d11eebd9c614be8086fbde9bc919
+| Author: SHREYAS <samarthpuru3557@gmail.com>
+| Date:   Fri May 5 15:28:17 2023 +0530
+|
+|     Version 2
+|
+* commit 6801e36b1286a3519776987f8a1231c01682be66
+  Author: SHREYAS <samarthpuru3557@gmail.com>
+  Date:   Fri May 5 15:27:01 2023 +0530
+
+      Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout 6801e36b1286a3519776987f8a1231c01682be66
+Note: switching to '6801e36b1286a3519776987f8a1231c01682be66'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 6801e36 Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git log --all
+commit a0e7325f2f0be84d06b9f33468f6dbd80a411522 (master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:37:40 2023 +0530
+
+    modified version 1
+
+commit d0c5cbd3bbd36de3b0c13132e9b1188da7bfb5e5
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:36:49 2023 +0530
+
+    restored version 2
+
+commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:52 2023 +0530
+
+    Version 3
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66 (HEAD)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout a0e7325f2f0be84d06b9f33468f6dbd80a411522
+Previous HEAD position was 6801e36 Version 1
+HEAD is now at a0e7325 modified version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git log
+commit a0e7325f2f0be84d06b9f33468f6dbd80a411522 (HEAD, master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:37:40 2023 +0530
+
+    modified version 1
+
+commit d0c5cbd3bbd36de3b0c13132e9b1188da7bfb5e5
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:36:49 2023 +0530
+
+    restored version 2
+
+commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:52 2023 +0530
+
+    Version 3
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout a0e7325f2f0be84d06b9f33468f6dbd80a411522 .
+Updated 0 paths from 015da1e
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout a0e7325f2f0be84d06b9f33468f6dbd80a411522
+HEAD is now at a0e7325 modified version 1
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout a0e7325f2f0be84d06b9f33468f6dbd80a411522 .
+Updated 0 paths from 015da1e
+PS C:\Users\SHREYAS P\Desktop\practice git> git checkout c84359343654d11eebd9c614be8086fbde9bc919 .
+Updated 2 paths from 33162ea
+PS C:\Users\SHREYAS P\Desktop\practice git> git log
+commit a0e7325f2f0be84d06b9f33468f6dbd80a411522 (HEAD, master)
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:37:40 2023 +0530
+
+    modified version 1
+
+commit d0c5cbd3bbd36de3b0c13132e9b1188da7bfb5e5
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:36:49 2023 +0530
+
+    restored version 2
+
+commit 0c7bb0ed1b2d3f0c4a9af23ffad243ceb21f0552
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:52 2023 +0530
+
+    Version 3
+
+commit c84359343654d11eebd9c614be8086fbde9bc919
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:28:17 2023 +0530
+
+    Version 2
+
+commit 6801e36b1286a3519776987f8a1231c01682be66
+Author: SHREYAS <samarthpuru3557@gmail.com>
+Date:   Fri May 5 15:27:01 2023 +0530
+
+    Version 1
+PS C:\Users\SHREYAS P\Desktop\practice git>
+
+
+
